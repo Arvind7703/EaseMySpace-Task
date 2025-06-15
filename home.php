@@ -240,8 +240,8 @@ $teamMembers = [
 ?>
 <div class='grid lg:grid-cols-3 xs:grid-rows-3 gap-8 place-items-center py-10 px-5'>
   <?php foreach ($teamMembers as $member): ?>
-    <div class="group w-full max-w-md bg-gradient-to-br from-white to-yellow-50 shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center space-y-6 transform lg:hover:scale-105 lg:hover:shadow-3xl transition duration-500 ease-in-out">
-      <img src="<?= $member['img'] ?>" alt="<?= $member['name'] ?>" class="w-36 h-36 rounded-full object-cover shadow-xl border-4 border-white lg:group-hover:border-yellow-300 border-yellow-300  transition-all duration-500 ease-in-out group-hover:shadow-xl" />
+    <div class="group w-full max-w-md bg-white shadow-2xl rounded-2xl p-8 flex flex-col items-center text-center space-y-6 transform lg:hover:scale-105 lg:hover:shadow-3xl transition duration-500 ease-in-out">
+      <img src="<?= $member['img'] ?>" alt="<?= $member['name'] ?>" class="w-36 h-36 rounded-full object-cover shadow-xl border-4 border-white lg:group-hover:border-yellow-300 xs:border-yellow-300  transition-all duration-500 ease-in-out group-hover:shadow-xl" />
       
       <div>
         <p class="font-serif text-3xl font-extrabold text-gray-800"><?= $member['name'] ?></p>
