@@ -5,6 +5,7 @@ let conflictTest = document.querySelectorAll(".conflict-txt-test");
 let mapping = document.getElementsByClassName("maping-test");
 let togglefeature = document.querySelector(".mode-toggle");
 let togglebtn = document.querySelector("#toggleIcon");
+let togglebtnMobile = document.querySelector("#toggleIconMobile");
 let conflictElem = document.querySelector(".conflictelem")
 
 
@@ -18,7 +19,6 @@ animateHead1.forEach((el) => {
     y: "-100px",
     opacity: 0,
     duration: 1.4,
-    ease: "bounce.out",
     scrollTrigger: {
       trigger: el,
       start: "top 80%",
@@ -58,24 +58,48 @@ gsap.from(conflictTest, {
 
 // dark mode light mode btn and functionality
 
+// for laptop 
 togglebtn.addEventListener("click", () => {
   togglefeature.classList.toggle("bg-zinc-950");
   togglefeature.classList.toggle("text-zinc-100");
   conflictElem.classList.toggle("bg-zinc-950"); 
 });
 
-const icon = document.getElementById("toggleIcon");
 
-icon.addEventListener("click", () => {
-  if (icon.classList.contains("fa-moon")) {
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
-    icon.classList.remove("text-black");
-    icon.classList.add("text-white");
+togglebtn.addEventListener("click", () => {
+  if (togglebtn.classList.contains("fa-moon")) {
+    togglebtn.classList.remove("fa-moon");
+    togglebtn.classList.add("fa-sun");
+    togglebtn.classList.remove("text-black");
+    togglebtn.classList.add("text-white");
   } else {
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
-    icon.classList.remove("text-white");
-    icon.classList.add("text-black");
+    togglebtn.classList.remove("fa-sun");
+    togglebtn.classList.add("fa-moon");
+    togglebtn.classList.remove("text-white");
+    togglebtn.classList.add("text-black");
+  }
+});
+
+
+// for mobile 
+togglebtnMobile.addEventListener("click", () => {
+  togglefeature.classList.toggle("bg-zinc-950");
+  togglefeature.classList.toggle("text-zinc-100");
+  conflictElem.classList.toggle("bg-zinc-950"); 
+});
+
+
+
+togglebtnMobile.addEventListener("click", () => {
+  if (togglebtnMobile.classList.contains("fa-moon")) {
+    togglebtnMobile.classList.remove("fa-moon");
+    togglebtnMobile.classList.add("fa-sun");
+    togglebtnMobile.classList.remove("text-black");
+    togglebtnMobile.classList.add("text-white");
+  } else {
+    togglebtnMobile.classList.remove("fa-sun");
+    togglebtnMobile.classList.add("fa-moon");
+    togglebtnMobile.classList.remove("text-white");
+    togglebtnMobile.classList.add("text-black");
   }
 });

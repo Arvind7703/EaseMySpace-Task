@@ -18,58 +18,55 @@
       <!-- Landing page  -->
   <section id='landing'>
  <header>
-    <nav class="lg:pl-20 lg:pr-10 px-0 fixed w-full h-[5rem] flex items-center justify-between bg-white/40 backdrop-blur-md  z-50">
-      <a class='lg:text-3xl text-xl font-bold text-shadow-lg lg:pl-0 pl-5' href="">EaseMy<span class='text-yellow-400'>Space</span>.in
-    </a>
+    <nav class="lg:pl-20 lg:pr-10 px-0 fixed w-full h-[5rem] flex items-center justify-between bg-white/40 backdrop-blur-md z-50">
+  <a class="lg:text-3xl text-xl font-bold text-shadow-lg lg:pl-0 pl-5" href="">EaseMy<span class="text-yellow-400">Space</span>.in</a>
+  <input type="checkbox" id="menu-toggle" class="hidden peer" />
 
-<!-- Toggle Button (Hamburger / Close) -->
-<label for="menu-toggle" class="lg:hidden fixed top-4 right-4 z-50 cursor-pointer text-3xl text-zinc-800">
-  <!-- Hamburger Icon -->
-  <i id="toggleIcon" class="fa-solid fa-moon  text-2xl text-black cursor-pointer transition-colors duration-300 pr-5"></i>
-  <i class="fa-solid fa-bars peer-checked:hidden block "></i>
-  <!-- Close Icon -->
-  <!-- <i class="fa-solid fa-xmark hidden peer-checked:hidden "></i> -->
-</label>
+   <div class='lg:hidden flex'>
 
-<!-- Mobile Menu -->
-<div class="lg:hidden fixed top-[5rem] left-0 w-full bg-white z-40 px-6 py-6 overflow-hidden 
-            max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out
-            peer-checked:max-h-[500px] peer-checked:opacity-100 peer-checked:pointer-events-auto">
-  <ul class="flex flex-col space-y-6 text-zinc-800 font-semibold text-center w-full max-w-xs mx-auto">
-    <li>Home</li>
-    <li>About</li>
-    <li>Services</li>
-    <li>Contact</li>
-    <li>
-      <button class="w-full mt-4 px-5 py-2 bg-yellow-400 hover:bg-yellow-500 transition rounded-lg font-semibold">
-        Login
+     <i id="toggleIconMobile" class="fa-solid fa-moon text-2xl text-black transition-colors duration-300 block lg:hidden pr-14 pb-4"></i>
+   </div>
+  <label for="menu-toggle" class="lg:hidden fixed top-4 right-4 z-50 cursor-pointer text-3xl text-zinc-800 flex items-center gap-3">
+    
+    
+    <!-- Hamburger Icon -->
+    <i class="fa-solid fa-bars peer-checked:hidden block"></i>
+  </label>
 
-      </button>
-      
-    </li>
+  <!-- Mobile Menu -->
+  <div class="lg:hidden fixed top-[5rem] left-0 w-full bg-white z-40 px-6 py-6 overflow-hidden 
+    max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out
+    peer-checked:max-h-[500px] peer-checked:opacity-100 peer-checked:pointer-events-auto">
+    
+    <ul class="flex flex-col space-y-6 text-zinc-800 font-semibold text-center w-full max-w-xs mx-auto">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+      <li>
+        <button class="w-full mt-4 px-5 py-2 bg-yellow-400 hover:bg-yellow-500 transition rounded-lg font-semibold">Login</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- laptop Nav -->
+  <ul class="lg:flex items-center justify-center gap-7 text-zinc-700 font-semibold hidden">
+    <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Home</li>
+    <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">About</li>
+    <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Find Flatmate</li>
+    <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Contact</li>
+    <button class="relative group px-6 w-[100px] h-[50px] py-2 bg-yellow-400 hover:bg-zinc-800 text-zinc-800 hover:text-yellow-200 rounded-lg font-semibold ml-5 overflow-hidden shadow-lg transition-all duration-200 ease-in-out">
+      <span class="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-x-full">Login</span>
+      <span class="absolute inset-0 flex items-center justify-center translate-x-full transition-transform duration-300 group-hover:translate-x-0">Login</span>
+    </button>
+    <!-- laptop mode toggle -->
+    <i id="toggleIcon" class="fa-solid fa-moon text-2xl text-black cursor-pointer transition-colors duration-300"></i>
   </ul>
-</div>
-
-    <ul class='lg:flex items-center justify-center gap-7 text-zinc-700 font-semibold hidden'>
-     <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Home</li>
-      <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">About</li>
-        <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Find Flatmate</li>
-        <li class="nav-link relative group cursor-pointer text-zinc-800 hover:text-zinc-900 transition-all duration-300 ease-in-out">Contact</li>
-       <button class="relative group px-6 w-[100px] h-[50px] py-2 bg-yellow-400 hover:bg-zinc-800 text-zinc-800 hover:text-yellow-200 rounded-lg font-semibold ml-5 overflow-hidden shadow-lg transition-all duration-200 ease-in-out">
-  <span class="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-x-full">
-    Login
-  </span>
-  <span class="absolute inset-0 flex items-center justify-center translate-x-full transition-transform duration-300 group-hover:translate-x-0">
-    Login
-  </span>
-</button>
-     <i id="toggleIcon" class="fa-solid fa-moon  text-2xl text-black cursor-pointer transition-colors duration-300"></i>
+</nav>
 
 
-      </ul>
-    </nav>
   </header>
-  <main class='pt-32 flex flex-col items-center justify-center gap-5 lg:px-0 px-5'>
+  <main class='pt-32 lg:pt-24 flex flex-col items-center justify-center gap-5 lg:px-0 px-5'>
     <div>
       <div class=' overflow-hidden'>
 
